@@ -1,0 +1,57 @@
+
+1. Create a protonmail account in private way:
+  * https://www.protonmail.com
+  * do not provide a backup email account
+  * use a strong password (https://xkcd.com/936/) but make sure to keep it in a password manager (https://privacytools.io/software/passwords/)
+  * use a disposable temporary e-mail address (https://www.guerrillamail.com) to prove that your a human being and not a bot
+  * protonmail rejects some top-level domains for security reason, so try a few until protonmail accepts the email address (https://www.guerrillamail.com offers several top-level domains, e.g., pokemail.net)
+
+2. Github how-tos
+  https://guides.github.com/activities/hello-world/
+ 
+3. Install Ubuntu Server LTS on VirtualBox, and access it with SSH
+
+  3.1. Overview - main tasks
+    3.1.1. Pre-requisites: ~ 400 GB free HD space (unless pruning is used after the initial blockchain download - that take days to complete)
+    3.1.2. Setting up VirtualBox, a free, open source virtual machine host 
+    3.1.3. Installing and configuring the latest stable, long-term version of Ubuntu Server within virtual machine host
+    3.1.4. Installing and configuring a Bitcoin Core full node
+    3.1.5. Configuring bitcoind to run over Tor network (privacy + avoid need to modify home router settings to allow incoming Bitcoin network traffic)
+
+  3.2. VirtualBox
+    3.2.1 Download the latest stable version (6.1+) of VirtualBox (http://www.virtualbox.org)
+    3.2.2 Download the Oracle VM VirtualBox Extension Pack (same version as the Virtual Box -> support for USB 2/3. disk encryption, etc)
+
+  3.3. Download latest Ubuntu Server LTS (Option 3) ISO (disc image) LTS (Long-term Support) = supported for 5 years
+
+  3.4. Install Ubuntu Linux server virtual machine
+    3.4.1. Start VirtualBox
+    3.4.2. New Icon: Name: Ubuntu Server LTS ); Type = Linux; Version: Ubuntu (64-bit)
+    3.4.3. Memory size: at least 2048 KB
+    3.4.4. Hard disk: Create a virtual hard disk now (default)
+    3.4.5. Hard disk file type: VDI (Virtual Disk Image)
+    3.4.6. Storage on physical hard disk: Dynamically allocated (default)
+    3.4.7. File location and size: default location; size = at least 400 KB (610 GB -> VirtualBox won’t consume this space immediately, but will grow the virtual disk in size as needed, up to that limit). On Jan 1, 2016, the BTC blockchain size was about 55MB and since then, it increases by 50MB every year
+    3.4.8. (optional) in order to increase the size of the virtual disk: File > Virtual Media Manager
+    3.4.9. Start Icon > Normal Start
+    3.4.10. Click on the folder icon then Add and go to the Ubuntu .ISO file location; Choose; Start and let it run
+    13.4.1. You cannot use your mouse to navigate the graphical interface. To navigate the text-based installer, you cannot use your mouse. You will need to use the arrow keys to move among selections, the TAB key to jump to confirmation buttons, and the ENTER key to select
+    3.4.12. Choose your preferred language
+    13.4.3. Update to the new Installer
+    3.4.14. Keyboard configuration
+    3.4.15. Network connection (should be automatically identified)
+    3.4.16. Configure proxy: leave blank
+    3.4.17. Configure Ubuntu archive mirror: leave blank
+    3.4.18. Guided storage configuration: keep defaults
+    3.4.19. File system summary: keep defaults
+    3.4.20. Confirm destructive action: Continue ENTER (only impacts the VM, not the host)
+    3.4.21. Profile setup: name, server name, username and password
+    3.4.22. Install OpenSSH server
+    3.4.23. Import SSH identity: NO or from Github or from Launchpad
+    3.4.24. Featured Server Snaps: leave all unselected
+    3.4.25. Once the installation is complete, choose Reboot
+    3.4.26. Press Enter when prompted to Please remove the installation media (VirtualBox will try unmount a cdrom instead of the .iso)
+    3.4.27. The VM will reboot, and after a few minutes you’ll see the login prompt; login and then get the latest security and software updates
+    3.4.8. run $: sudo apt update && sudo apt upgrade (Do you want to continue? y ENTER)
+    3.4.29. Close the VR window. And chose: Send the shutdown signal
+    3.4.30. Virtual Box > Machine > Clone (MAC Address Policy: Generate new MAC addresses for all network adapters; Full Clone): Clone the newly created VM and rename it Ubuntu LTS BTC Node. This way, you will be able to start the Bitcoin Core server installation from a fresh Ubuntu install (instead of starting from scratch) if something goes wrong in the next steps (cloning takes less than 5 minutes)
