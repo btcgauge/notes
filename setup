@@ -9,6 +9,23 @@
 2. Github how-tos
   https://guides.github.com/activities/hello-world/
  
+3. Git and Github tutorial for poets - 8 - Github pages
+ * by default: “master” branch
+ * switch/create to “gh-pages” branch
+ * make “gh-pages” your default branch: Github > Settings tab > Branches > Default branch: gh-pages
+ * You can delete the master branch: Code tab > branches link (top) > Trash icon
+ * Github > Settings tab > Github pages
+ * It can be configured to link to your custom URL
+     * set domain in Github > Settings > Github pages > Custom domain. It will create a file named CNAME. Don’t delete it
+     * on your domain name register, under DNS, set at least 2 records:
+         * Name: @, Type: A, IPv4 addresses: 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153
+         * Name: www (or/and other subdomains), Type: CNAME, IPv4 address: YOUR-GITHUB-USERNAME.github.io
+     * https://app.streamline.to/home for free icons
+     * https://themes.3rdwavemedia.com/coderpro/bs4/contact.html for theme ideas
+ * Github > Create New File: .html (or .txt file). Best: index.html
+ * $ git clone https://….git
+ * $ git pull origin gh-pages
+
 3. Install Ubuntu Server LTS on VirtualBox, and access it with SSH
 
   3.1. Overview - main tasks
