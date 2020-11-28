@@ -10,10 +10,10 @@
   https://guides.github.com/activities/hello-world/
  
 3. Git and Github tutorial for poets - 8 - Github pages
- * by default: “master” branch
+ * default branch is “master”
  * switch/create to “gh-pages” branch
- * make “gh-pages” your default branch: Github > Settings tab > Branches > Default branch: gh-pages
- * You can delete the master branch: Code tab > branches link (top) > Trash icon
+ * make “gh-pages” your default branch: Github > Settings tab > Branches > Default branch: gh-pages (yes to warning message)
+ * delete the master branch: Code tab > Branches > all branches > Trash icon
  * Github > Settings tab > Github pages
  * It can be configured to link to your custom URL
      * set domain in Github > Settings > Github pages > Custom domain. It will create a file named CNAME. Don’t delete it
