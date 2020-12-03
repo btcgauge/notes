@@ -11,4 +11,4 @@
     - betting (elections, sports)
     - hedging (e.g., forward contracts) or synthetic assets (synthetic gold in BTC-denominated terms)
    - Articles:
-      - https://medium.com/@gertjaap/discreet-log-contracts-invisible-smart-contracts-on-the-bitcoin-blockchain-cc8afbdbf0db
+      - [ ] https://medium.com/@gertjaap/discreet-log-contracts-invisible-smart-contracts-on-the-bitcoin-blockchain-cc8afbdbf0db
