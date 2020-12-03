@@ -12,3 +12,6 @@
 
 ### Python library
 * https://github.com/petertodd/python-bitcoinlib
+
+### Sources of information
+- https://bitcoinmagazine.com/best-of-bitcoin-magazine
