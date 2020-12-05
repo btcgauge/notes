@@ -13,6 +13,13 @@
   - Use cases:
     - betting (elections, sports) - 1st use case: [bet on 2020 US elections results](https://twitter.com/NicolasDorier/status/1303356212705030144) between Christian Stewart (Suredbits) and Nicolas Dorier (BTCPayServer) using [bitcoin-s], a JVM toolkit](https://github.com/bitcoin-s/bitcoin-s) and [this oracle](https://twitter.com/outcomeobserver)
     - hedging (e.g., forward contracts) or synthetic assets (synthetic gold in BTC-denominated terms)
+   - DLC on the Lightning Network using Taproot
+      - does not require parties to have a channel open with each other
+      - requires barrier escrows which is not yet implemented
+      - distribute trust between multiple oracles (no single point of failure)
    - Articles:
     - Original proposal: https://adiabat.github.io/dlc.pdf
       - [ ] https://medium.com/@gertjaap/discreet-log-contracts-invisible-smart-contracts-on-the-bitcoin-blockchain-cc8afbdbf0db
+      - [ ] https://suredbits.com/category/discreet-log-contracts/
+      - [ ] [DLC specifications](https://suredbits.com/category/discreet-log-contracts)
+      
