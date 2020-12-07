@@ -1,3 +1,6 @@
+### Learn how to use a computer the hard way
+* https://missing.csail.mit.edu
+
 ### Set up a BTC over Tor
 * https://medium.com/coinmonks/how-to-run-a-bitcoin-full-node-over-tor-on-an-ubuntu-linux-virtual-machine-bdd7e9415a70
 * https://blog.lopp.net/how-to-run-bitcoin-as-a-tor-hidden-service-on-ubuntu/
