@@ -1,7 +1,7 @@
 ### Steps
 1. Install VirtualBox
 1. Create an Ubuntu LTS Virtual Machine (VM) on VirtualBox
-1. Access the VM via SSH from another computer
+1. (Optional) Access the VM via SSH from another computer
 1. Install Bitcoin on Ubuntu
 1. Install and configure Tor
 1. Bitcoin Initial Block Download (IBD)
