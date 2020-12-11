@@ -52,12 +52,14 @@ CookieAuthFile /run/tor/control.authcookie
 Log notice syslog
 ControlPort 9051
 ```
-1. Check the tor group name to be as above (debian-tor): `$ cat /etc/group`. It shows `debian-tor:x:118:` if there is no user in that group, `debian-tor:x:118:USER_NAME` otherwise
+5. Check the tor group name to be as above (debian-tor): `$ cat /etc/group`. It shows `debian-tor:x:118:` if there is no user in that group, `debian-tor:x:118:USER_NAME` otherwise
 1. Check your identity: `$ who`
 1. List the group of which you are a member: `$ id USER_NAME`
 1. Add user to Tor group: `$ sudo adduser USER_NAME debian-tor`
 1. Confirm the creation by running (1) and (3) again
-1. Edit ~/.bitcoin/bitcoin.conf: ```$ vim ~/.bitcoin/bitcoin.conf
+1. Edit ~/.bitcoin/bitcoin.conf:
+```
+$ vim ~/.bitcoin/bitcoin.conf
 # [User access to the blockchain]
 txindex=1
 # [Tor configuration]
