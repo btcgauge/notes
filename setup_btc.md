@@ -6,6 +6,18 @@
 1. Bitcoin Initial Block Download (IBD)
 1. Confirm Bitcoin is up and running
 
+
+Todo:
+- [ ] not done yet
+- [x] already done
+
+--already--
+
+
+Quotes:
+> We're living the future so
+> the present is our past.
+
 ### Learn how to use a computer the hard way
 - https://missing.csail.mit.edu
 
