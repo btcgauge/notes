@@ -9,6 +9,25 @@
 
 ### What is Bitcoin
 
+Rebuttal to Common Criticisms: Bitcoin is ...
+Criticism | Rebuttal
+--- | ---
+Too volatile | 
+Just for speculation | 
+Used by criminals |
+Not money or currency |
+Can be replicated |
+A bubble that will pop | 
+
+
+Explanation of the memes:
+Meme | Why | How
+--- | --- | ----
+Not your keys, not your bitcoin | bitcoins hosted on an exchange are controlled by the exchange, not you | Move your bitcoin to a hardware wallet, preferably http://usecoldcard.com
+Don't trust, verify | Verify that your transactions was added to a block to prove ownership | Run your own node
+Bitcoin, not blockchain | A response to the 'Blockchain, not Bitcoin' / 'Blockchain technology' memes from 2016 | Blockchain is one required component to Bitcoin, but on its own, is not necessarily permissionless or secure
+
+
 ### Why do you need to run your own node
 
 ### Basic command line skills
