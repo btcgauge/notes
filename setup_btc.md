@@ -74,14 +74,14 @@ dns=0
 addnode=nkf5e6b7pl4jfd4a.onion
 addnode=yu7sezmixhmyljn4.onion
 ```
-1. If file /etc/tor/torrc does not exist, create it: `$ sudo touch /etc/tor/torrc`
+11. If file /etc/tor/torrc does not exist, create it: `$ sudo touch /etc/tor/torrc`
 1. Add the following lines to /etc/tor/torrc if not already there: `$ sudo vim /etc/tor/torrc`
 ```
 ControlPort 9051
 CookieAuthentication 1
 CookieAuthFileGroupReadable 1
 ```
-1. Stop bitcoind if it is running: `$ bitcoin-cli stop`
+13. Stop bitcoind if it is running: `$ bitcoin-cli stop`
 1. Reboot your machine: `$ reboot`
 1. After the reboot, check the logs: `$ tail -f ~/.bitcoin/debug.log`
 1. In another terminal, start bitcoin: `$ bitoind`
