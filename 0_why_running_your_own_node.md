@@ -9,16 +9,24 @@
 
 ### What is Bitcoin
 
+Main characterics:
+- censhorship resistance
+- permissionless
+
+Main components:
+- Proof of Work: 
+- Blockchain: cryptographically-chained block of transactions
+
+
 Rebuttal to Common Criticisms: Bitcoin is ...
 Criticism | Rebuttal
 --- | ---
-Too volatile | 
-Just for speculation | 
-Used by criminals |
-Not money or currency |
-Can be replicated |
-A bubble that will pop | 
-
+Too volatile | The Bitcoin technology is very stable with an uptime 99.985% (it was down for 15 hours - in 2010 and 2013 - over the 10+ years of Bitcoin's existence). The USD/BTC price being very volatile is a feature of its adoption being very early. The USD/BTC price can be seen as Bitcoin's expected value = USD/BTC in the long term x chances of happening. A price of $10,000 means that the market on average thinks that there is 1% chance for USD/BTC to reach $1M. The year-on-year price increase has been steady (*ADD REFERENCE*). The volatility is likely to decrease as the Bitcoin adoption life cycle moves to later phases
+Just for speculation | Speculation on assets with high volatility is not uncommon, but the steady increase in the year-on-year USD/BTC price is sign that 
+A bubble that will pop | Bitcoin has stood the test of time in spite the numerous predictions of its downfall (https://99bitcoins.com/bitcoin-obituaries). Even Satoshi Nakamoto was uncertain Bitcoin would succeed (*ADD REFERENCE*)
+Can be replicated | Bitcoin Cash vs Bitcoin
+Used by criminals | USD, EUR
+Not money or currency | Early days: cash payment, now: store of value + settlement system for second layer solutions (Lightning Network, Liquid)
 
 Explanation of the memes:
 Meme | Why | How
