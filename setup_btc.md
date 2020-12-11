@@ -57,16 +57,6 @@ CookieAuthFile /run/tor/control.authcookie
 Log notice syslog
 ControlPort 9051
 ```
-```javascript
-if (isAwesome){
-  return true
-}
-```
-```
-if (isAwesome){
-  return true
-}
-```
 
 - (1) Check the tor group name to be as above (debian-tor): `$ cat /etc/group`
   - it shows 'debian-tor:x:118:' if there is no user in that group, 'debian-tor:x:118:USER_NAME' otherwise
@@ -105,8 +95,8 @@ CookieAuthFileGroupReadable 1
 - (14) Find out own onion address: ```$ grep "tor: Got service ID" ~/.bitcoin/debug.log```, e.g., a7zzgota55omnenz.onion:8333
 - (15) Get network info: ```$ watch bitcoin-cli getnetworkinfo```
 - (16) ```$firefox bitnodes.io``` and copy and paste your onion address (unreachable until the initial block load is complete?)
-- (17) Get list of peer nodes: ``` $ bitcoin-cli getpeerinfo | grep onion```
-
+- (17) Get list of peer nodes: `$ watch `bitcoin-cli getpeerinfo | grep onion'`
+- (18) Check progress of the Initial Block Download: `$ watch -n1 'bitcoin-cli getblockchaininfo | grep verificationprogress'`
 
 ### Bisq
 - the P2P exchange network (peer-to-peer and anonymously)
