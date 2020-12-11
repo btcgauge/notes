@@ -24,22 +24,17 @@
 - set it with Bridget network adapter so it has its own IP and you can address your Ubuntu server from inside your own network
 - $ curl ifconfig.me returns the outside IP
 - regardless of whether the server is a real or a virtual machine, you need to forward the appropriate port(s) across your LAN router, i.e., translate from the public IP you obtained from https://ifconfig.me to the server's private IP. You will need to refer to your router's documentation to see how to do that for your specific 
-  
-    
-    
-### Run Bitcoin on Tor
-https://www.youtube.com/watch?v=57GW5Q2jdvw
 
-Use Tor to defend against traffic analysis and network surveillance
-In order to hid your IP address, route all of your bitcoin traffi through the Tor network.
-Once done, you'll only see the peers' onion instead of IP addresses
-$ watch bitcoin-cli getnetworkinfo # by default, only ipv4 and ipv6 networks are reachable
-$ sudo apt-get install tor
-after tor is install, every time you login into Ubuntu, tor will be ON by default
-- To check if tor is running (active): `$ service tor status`
-$ sudo vim /usr/share/tor/tor-service-defaults-torrc
-You should see:
-```
+
+### Run Bitcoin on Tor
+
+In order to defend against traffic analysis and network surveillance, hide your IP address and route all of your Bitcoin traffic through the Tor network. Once done, you'll only see the peers' onion instead of IP addresses
+
+1. Install tor: `$ sudo apt-get install tor`
+1. After tor is installed, tor will be ON by default after each login
+1. To check if tor is running (active), run: `$ service tor status`
+1. Check the default tor configuration file:
+```$ sudo vim /usr/share/tor/tor-service-defaults-torrc
 DataDirectory /var/lib/tor
 PidFile /run/tor/tor.pid
 RunAsDaemon 1
@@ -57,15 +52,12 @@ CookieAuthFile /run/tor/control.authcookie
 Log notice syslog
 ControlPort 9051
 ```
-
-- (1) Check the tor group name to be as above (debian-tor): `$ cat /etc/group`
-  - it shows 'debian-tor:x:118:' if there is no user in that group, 'debian-tor:x:118:USER_NAME' otherwise
-- (2) Check your identity: `$ who`
-- (3) List the group of which you are a member: `$ id USER_NAME`
-- (4) Add user to Tor group: `$ sudo adduser USER_NAME debian-tor`
-- (5) Confirm the creation by running (1) and (3) again
-- (6) Edit ~/.bitcoin/bitcoin.conf:
-```
+1. Check the tor group name to be as above (debian-tor): `$ cat /etc/group`. It shows `debian-tor:x:118:` if there is no user in that group, `debian-tor:x:118:USER_NAME` otherwise
+1. Check your identity: `$ who`
+1. List the group of which you are a member: `$ id USER_NAME`
+1. Add user to Tor group: `$ sudo adduser USER_NAME debian-tor`
+1. Confirm the creation by running (1) and (3) again
+1. Edit ~/.bitcoin/bitcoin.conf: ```$ vim ~/.bitcoin/bitcoin.conf
 # [User access to the blockchain]
 txindex=1
 # [Tor configuration]
@@ -80,23 +72,24 @@ dns=0
 addnode=nkf5e6b7pl4jfd4a.onion
 addnode=yu7sezmixhmyljn4.onion
 ```
-- (7) If file /etc/tor/torrc does not exist, create it: `$ sudo touch /etc/tor/torrc`
-- (8) Add the following lines to /etc/tor/torrc if not already there:
+1. If file /etc/tor/torrc does not exist, create it: `$ sudo touch /etc/tor/torrc`
+1. Add the following lines to /etc/tor/torrc if not already there: `$ sudo vim /etc/tor/torrc`
 ```
 ControlPort 9051
 CookieAuthentication 1
 CookieAuthFileGroupReadable 1
 ```
-- (9) ```$ bitcoin-cli stop```
-- (10) ```$ reboot```
-- (11) After the reboot, check the logs: ```$ tail -f ~/.bitcoin/debug.log```
-- (12) In another terminal, start bitcoin: ```$ bitoind```
-- (13) Check all the new nodes: ```$ grep "New outbound peer connected" ~/.bitcoin/debug.log```
-- (14) Find out own onion address: ```$ grep "tor: Got service ID" ~/.bitcoin/debug.log```, e.g., a7zzgota55omnenz.onion:8333
-- (15) Get network info: ```$ watch bitcoin-cli getnetworkinfo```
-- (16) ```$firefox bitnodes.io``` and copy and paste your onion address (unreachable until the initial block load is complete?)
-- (17) Get list of peer nodes: `$ watch `bitcoin-cli getpeerinfo | grep onion'`
-- (18) Check progress of the Initial Block Download: `$ watch -n1 'bitcoin-cli getblockchaininfo | grep verificationprogress'`
+1. Stop bitcoind if it is running: `$ bitcoin-cli stop`
+1. Reboot your machine: `$ reboot`
+1. After the reboot, check the logs: `$ tail -f ~/.bitcoin/debug.log`
+1. In another terminal, start bitcoin: `$ bitoind`
+1. Check all the new nodes: `$ grep "New outbound peer connected" ~/.bitcoin/debug.log`
+1. Find out own onion address: `$ grep "tor: Got service ID" ~/.bitcoin/debug.log`, e.g., a7zzgota55omnenz.onion:8333
+1. Get network info: `$ watch bitcoin-cli getnetworkinfo`
+1. ```$firefox bitnodes.io``` and copy and paste your onion address (unreachable until the initial block load is complete?)
+1. Get list of peer nodes: `$ watch `bitcoin-cli getpeerinfo | grep onion'`
+1. Check progress of the Initial Block Download: `$ watch -n1 'bitcoin-cli getblockchaininfo | grep verificationprogress'`
+1. `$ watch bitcoin-cli getnetworkinfo`
 
 ### Bisq
 - the P2P exchange network (peer-to-peer and anonymously)
