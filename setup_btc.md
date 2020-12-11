@@ -1,3 +1,11 @@
+### Steps
+1. Install VirtualBox
+1. Install Ubuntu LTS on VirtualBox
+1. Install Bitcoin on Ubuntu
+1. Install and configure Tor
+1. Bitcoin Initial Block Download (IBD)
+1. Confirm Bitcoin is up and running
+
 ### Learn how to use a computer the hard way
 - https://missing.csail.mit.edu
 
