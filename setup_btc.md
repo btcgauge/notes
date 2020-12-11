@@ -1,18 +1,15 @@
 ### Steps
 1. Install VirtualBox
-1. Install Ubuntu LTS on VirtualBox
+1. Create an Ubuntu LTS Virtual Machine (VM) on VirtualBox
+1. Access the VM via SSH from another computer
 1. Install Bitcoin on Ubuntu
 1. Install and configure Tor
 1. Bitcoin Initial Block Download (IBD)
 1. Confirm Bitcoin is up and running
 
-
 Todo:
 - [ ] not done yet
 - [x] already done
-
---already--
-
 
 Quotes:
 > We're living the future so
@@ -48,7 +45,7 @@ Quotes:
 
 ### Run Bitcoin on Tor
 
-In order to defend against traffic analysis and network surveillance, hide your IP address and route all of your Bitcoin traffic through the Tor network. Once done, you'll only see the peers' onion instead of IP addresses
+> In order to defend against traffic analysis and network surveillance, hide your IP address and route all of your Bitcoin traffic through the Tor network. Once done, you'll only see the peers' onion instead of IP addresses
 
 1. Install tor: `$ sudo apt-get install tor`
 1. To check if tor is running (active), run: `$ service tor status`. After tor is installed, tor will be ON by default after each login
