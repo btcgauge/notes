@@ -33,7 +33,8 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
                    n         n     /__ 1       n         2          2  
 ```
-- 2^255 = 2^31 * (2^32)^7 = (2 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn). This is to compare with the estimated number of atoms in the visible universe ~ 10^80 ~ 2^266
+- 2^255 = 2^31 * (2^32)^7 = (2 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
+- This is to be compared with the estimated number of atoms in the visible universe ~ 10^80 ~ 2^266
 - Another point of comparison:
   - There are (4 Bn) x (4 Bn) seconds in about 544 Bn years (or more than 39 times the age of universe of 13.8 billion years). The Milky Way has between 100 and 400 Bn stars. Let's assume there are 4 Bn Earth-like planets in each galaxy and there are about 39 x (4 Bn) = 156 Bn galaxies in the universe.
   - A really good Graphics Processing Unit (GPU) can generate a little less than 1 Bn (10^9) hashes per second (H/s). But Bitcoin miners use Application Specific Integrated Circuits (ASICs). They are pieces of hardware that are specifically designed for running a large number of SHA-256 hashes in parallel and nothing else. The efficiency gain is 1000-fold compared to a GPU. A Bitcoin ASICs can generate about 1Tn (10^12) hashes per second (T/s).
