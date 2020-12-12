@@ -208,16 +208,21 @@ Not money or currency | Early days: cash payment, now: store of value + settleme
 Consumes too much energy | Energy cannot be easily transported over long distances, so energy produced in scarcely populated areas with access of cheap energy with few consumers for it (Iceland, some parts of China, Northern Russia) are great places to mine Bitcoin.
 
 #### Common misconceptions
-
 Misconceptions | Responses
---- | --- 
+--- | ---
 It secures transactions by solving a complex problem | That's a poor description of Proof of Work. The problem to solve is very simple. You need to guess a number that has certain properties and that takes a large amount of computational effort
 
-#### Misnommers
+#### Common terms that are misnommers
 Misnommers | Correct description
---- | --- 
+--- | ---
 Wallet | Key chain, as it stores private and public keys (and track amounts associated to them), not credit cards and bills
 Address | Deposit ID, as they identify a certain deposit and they should never be re-used
+
+#### Past controversies
+Controversy | Background
+--- | ---
+ASICs vs GPUs | ASICs vs GPUs
+Big vs small blocks | Segwit hard/soft forks, Bitcoin (handle decisions)
 
 #### Explanation of the Twitter memes:
 Meme | Why | How
