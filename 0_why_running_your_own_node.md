@@ -1,5 +1,5 @@
 ### Topics
-1. [ ] [Cryptography 101](#why-do-you-need-to-run-your-own-node)
+1. [ ] [Cryptography 101](#cryptography-101)
 1. [ ] [What is Bitcoin](#what-is-bitcoin)
 1. [ ] [Why do you need to run your own node](#why-do-you-need-to-run-your-own-node)
 1. [ ] [Basic command line skills](#basic-command-line-skills)
