@@ -25,8 +25,11 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 - SHA256 is a cryptographic hash functions that return 256-bit digests
 
 #### How secure is 256-bit security?
-- Bitcoin signatures and SHA256 hash function digests are 256-bit long. If you want to find a message's SHA256 digest or message's 256-bit signature, there is no better method than guess and check random values. This would require, on average, 2^256 guesses.
-- 2^256 = (2^32)^8 = (4 Bn)^8 
+- Bitcoin signatures and SHA256 hash function digests are 256-bit long. If you want to find a message's SHA256 digest or message's 256-bit signature, there is no better method than guess and check random values. This would require, on average, 2^255 guesses.
+- Average number of guesses made to guess a number between 1 and n, assuming n is chosen uniformly at random (that is with probability 1/n) = Sum(a=1 to n)(1/n x a) = 1/n x Sum(a=1 to n)(a) = (1/n)(n)(n+1)/2 = (n+1)/2
+- Sum(1 to 100) = (100+1) + (99+2) + ... + (51+50) = (n+1)(n/2)
+- Number of atom in the visible universe ~ 10^80 ~ 2^266
+- 2^256 = (2^32)^8 = (4 Bn)^8 ~ 10^77
 - 2^256 = (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
   - A really good Graphics Processing Unit (GPU) on a computer can run a cryptographic hash function and generate a little less than 1 Bn hashes per second. The first 4 Bn can represent the number of hashes per second per computer (H/s)
   - Imagine 4Bn computers (Google is estimated to have about single digit millions of servers -> 4Bn servers ~ 1 kilo Google worth of computing power
