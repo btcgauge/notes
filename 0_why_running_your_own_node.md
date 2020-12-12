@@ -25,7 +25,7 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 - SHA256 is a cryptographic hash functions that return 256-bit digests
 
 #### How secure is 256-bit security?
-- Bitcoin security relies on digital signatures and SHA256 hash function digests are 256-bit long. As mentioned earlier, there is no better method than guess and check random values. `This would require, on average, 2^255 guesses` because (2^256 + 1) / 2 = 2^255, and the average number of tries to guess a number between 1 and n, assuming that the number we guess is chosen uniformly at random (that is witha probability 1/n) is:
+- Bitcoin security relies on digital signatures and SHA256 hash function digests are 256-bit long. As mentioned earlier, there is no better method than guess and check random values. `This would require, on average, 2^255 ~ 10^77 guesses` because (2^256 + 1) / 2 = 2^255, and the average number of tries to guess a number between 1 and n, assuming that the number we guess is chosen uniformly at random (that is witha probability 1/n) is:
 ```
                  __ n                                                  
                 \     x                                                
@@ -33,17 +33,11 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
                    n         n     /__ 1       n         2          2  
 ```
-- A really good Graphics Processing Unit (GPU) can generate a little less than 1 Bn (10^9) hashes per second (H/s). But Bitcoin miners use Application Specific Integrated Circuits (ASICs). They are pieces of hardware that are specifically designed for running a large number of SHA-256 hashes in parallel and nothing else. The efficiency gain is 1000-fold compared to a GPU. A Bitcoin ASICs can generate about 1Tn (10^12) hashes per second (T/s).
-- As points of comparison:
-  - The estimated number of atoms in the visible universe ~ 10^80 ~ 2^266
-  - 2^256 = (2^32)^8 = (4 Bn)^8 ~ 10^77 = (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
-  - Imagine 4Bn computers (Google is estimated to have about single digit millions of servers -> 4Bn servers ~ 1 kilo Google worth of computing power
-  - There are less than 8 Bn people on Earth. Imagine giving a little over half of every individual on Earth their own personal KiloGoogle
-  - Imagine 4Bn copies of this Earth (compared to 100 to 400 billion starts in the Milky Way) ~ 1% of every star in the galaxy
-  - Imagine 4 Bn copies of the Milky Way. Let's call it our GigaGalactic Super Computer
-  - 4 Bn seconds is about 126.8 years x 4 Bn = 507 Bn years (which is about 37 times the age of the universe)
-  - You would still only have a 1 in 4 Bn chance of finding the correct guess
-  - Total Bitcoin mining power ~ 5 Bn Bn H/s (1/3 of our KiloGoogle). Bitcoin miners use Application Specific Integrated Circuits. These are pieces of hardware that are a thousand times better than a GPU (Tn H/s) and are specifically designed for Bitcoin mining, for running a bunch of SHA-256 hashes in parallel and nothing else. There is a lot of efficiency gains to be had when you throw out the need for general computation and design your integrated circuits for one and only one task.
+- 2^255 = 2^31 * (2^32)^7 = (2 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn). This is to compare with the estimated number of atoms in the visible universe ~ 10^80 ~ 2^266
+- Another point of comparison:
+  - There are (4 Bn) x (4 Bn) seconds in about 544 Bn years (or more than 39 times the age of universe of 13.8 billion years). The Milky Way has between 100 and 400 Bn stars. Let's assume there are 4 Bn Earth-like planets in each galaxy and there are about 39 x (4 Bn) = 156 Bn galaxies in the universe.
+  - A really good Graphics Processing Unit (GPU) can generate a little less than 1 Bn (10^9) hashes per second (H/s). But Bitcoin miners use Application Specific Integrated Circuits (ASICs). They are pieces of hardware that are specifically designed for running a large number of SHA-256 hashes in parallel and nothing else. The efficiency gain is 1000-fold compared to a GPU. A Bitcoin ASICs can generate about 1Tn (10^12) hashes per second (T/s).
+  - Let's assume each Earth-like planets has the same population (there are about 8 Bn people on Earth) and each inhabitants has 4M ASICS running at all time. That would be (2 Bn) x (4 Bn) x (4 Bn) H/s computer power on each planet. If this computing power in the whole universe was generating hashes since the Big Bang, there would still have a 1 in 4Bn chance of finding the correct guess
 
 
 ### What is Bitcoin
@@ -83,10 +77,6 @@ If you use computational work as a basis for what you trust, you can make it so 
 
 Proof of Work
 Cryptographic hash functions can prove that a particular list of transactions is associated with a large amount of computational effort. 
-
-
-
-
 
 
 
@@ -144,8 +134,6 @@ Sound money: scarcity and censorship resistance
 
 Cannot be controlled by a sIngle party
 
-Bitcoin is not tied to anything, neither is USD or EUR, and how big is your position?
-
 Store and exchange value
 resilient to counterfeiting (double-spends)
 trust-less
@@ -188,6 +176,7 @@ Freedom: censorship resistance
  Reduces the need to trust other people of group of people (governments, organizations)
 
 #### Main characterics:
+- scarcity (the 
 - censhorship resistance
 - permissionless
 
@@ -215,6 +204,7 @@ Consumes too much energy | Energy cannot be easily transported over long distanc
 Misconceptions | Responses
 --- | ---
 It secures transactions by solving a complex problem | That's a poor description of Proof of Work. The problem to solve is very simple. You need to guess a number that has certain properties and that takes a large amount of computational effort
+Bitcoin is becoming too expensive to buy | The unit of currency in Bitcoin is sat not BTC, where 1 BTC = 100,000,000 sats. If 1 BTC is worth 100k USD, you can still purchase 1,000 sats for 1 USD (not including any fee)
 
 #### Common terms that are misnommers
 Misnommers | Correct description
@@ -228,6 +218,10 @@ Controversy | Background
 ASICs vs GPUs | ASICs vs GPUs
 Big vs small blocks | Segwit hard/soft forks, Bitcoin (handle decisions)
 
+#### Bitcoin historical events
+- Jan 3
+- Pizza day
+
 #### Explanation of the Twitter memes:
 Meme | Why | How
 --- | --- | ----
@@ -235,6 +229,7 @@ Not your keys, not your bitcoin | bitcoins hosted on an exchange are controlled 
 Don't trust, verify | Verify that your transactions was added to a block to prove ownership | Run your own node
 Bitcoin, not blockchain | A response to the 'Blockchain, not Bitcoin' / 'Blockchain technology' / 'Distributed Ledger Technology' memes from 2016 | Blockchain is one required component in Bitcoin, but, on its own, is not necessarily permissionless, secure or censorship resistant
 Bitcoin does not care | Many in the Bitcoin community have strong opinions about economics and social topics, but Bitcoin remains a censorship resistant, permissionless, secure means of payment no matter what your or other's opinions are | Learn about the Bitcoin technology and make your own opinion. Meet Bitcoin maximalists. Most are adorable in person
+Stack sats | You buy or earn amount less than 1 BTC | You can buy or earn sats. 1 BTC = 100,000,000 sats
 
 ### Why do you need to run your own node
 
