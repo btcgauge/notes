@@ -24,9 +24,19 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 - Cryptograhpic hash functions are hash functions for which the resulting digest is entirely unpredictable: it is infeasibable to compute in the reverse direction. There is no better method than to guess and check. No one has ever found a way to reverse engineer the desired input by looking into the details of how the function works. There is no rigorous proof that it is hard to compute in the reverse direction and yet a huge amount of modern security depends on cryptographic hash functions (e.g., secure connections to online bank account)
 - SHA256 is a cryptographic hash functions that return 256-bit digests
 
-#### 256-bit security
-How secure is 256 bit security? [OTHER VIDEO]
-There are 2^256 possible signatures. 2^256 is a stupidly large number
+#### How secure is 256-bit security?
+- Bitcoin signatures and SHA256 hash function digests are 256-bit long. If you want to find a message's SHA256 digest or message's 256-bit signature, there is no better method than guess and check random values. This would require, on average, 2^256 guesses.
+- 2^256 = (2^32)^8 = (4 Bn)^8 
+- 2^256 = (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
+  - A really good Graphics Processing Unit (GPU) on a computer can run a cryptographic hash function and generate a little less than 1 Bn hashes per second. The first 4 Bn can represent the number of hashes per second per computer (H/s)
+  - Imagine 4Bn computers (Google is estimated to have about single digit millions of servers -> 4Bn servers ~ 1 kilo Google worth of computing power
+  - There are less than 8 Bn people on Earth. Imagine giving a little over half of every individual on Earth their own personal KiloGoogle
+  - Imagine 4Bn copies of this Earth (compared to 100 to 400 billion starts in the Milky Way) ~ 1% of every star in the galaxy
+  - Imagine 4 Bn copies of the Milky Way. Let's call it our GigaGalactic Super Computer
+  - 4 Bn seconds is about 126.8 years x 4 Bn = 507 Bn years (which is about 37 times the age of the universe)
+  - You would still only have a 1 in 4 Bn chance of finding the correct guess
+  - Total Bitcoin mining power ~ 5 Bn Bn H/s (1/3 of our KiloGoogle). Bitcoin miners use Application Specific Integrated Circuits. These are pieces of hardware that are a thousand times better than a GPU (Tn H/s) and are specifically designed for Bitcoin mining, for running a bunch of SHA-256 hashes in parallel and nothing else. There is a lot of efficiency gains to be had when you throw out the need for general computation and design your integrated circuits for one and only one task.
+
 
 
 ### What is Bitcoin
