@@ -5,16 +5,16 @@
 1. [ ] [Basic command line skills](#basic-command-line-skills)
 1. [x] [Resources](#resources)
 
-If you are interested in crypto-currencies, I suggest you invest time in understanding Bitcoin first, because Bitcoin is the original crypto-currency protocol and many other crypto-currencies re-use the same concepts. Having said that, once you understand the characterestics of Bitcoin and the trade-offs made by other crypto-currencies, there will be a high chance that you will decide to stick with Bitcoin
+If you are interested in crypto-currencies, I suggest you invest time in understanding Bitcoin first, because Bitcoin is the original crypto-currency protocol and many other crypto-currencies re-use the same concepts. Having said that, once you understand the characterestics of Bitcoin and the trade-offs made by other crypto-currencies, there is a high chance that you will decide to stick with Bitcoin
 
 ### Cryptography 101
 
 #### Public key cryptography
-- Unlike symmetric cryptography that only uses private or secret keys, public key cryptography relies on public keys (pk) and private/secret key (sk)
+- Unlike symmetric cryptography that only uses private/secret keys, public key cryptography relies on public keys (pk) and private/secret key (sk)
 - The secret key is a number generated randomly, that you should keep to yourself. The public key is calculated based on the secret key
 
 #### Digital signatures
-- A handwritten signature only depends on the signing party. A digital signature depends on both the signing party (or rathe, a private key owned by the signing party) and the message itself being signed: `Signature = Sign(message, sk)` A small change in the message completely changes the digital signature, commonly a 256-bit number
+- A handwritten signature only depends on the signing party. A digital signature depends on both the signing party (or rathe, a private key owned by the signing party) and the message itself being signed using `Signature = Sign(message, sk)`. A small change in the message completely changes the digital signature, commonly a 256-bit number
 - When you verify a signature against a given message and public key is valid using `Verify(message, signature, pk) = True or False`, you can feel extemely confident that:
   1. the only way someone could have produced it is if they knew the private key associated with the public key. The private key ensures that only the signer can produce the signature. It is infeasible, in practical terms, to find a valid signature if you don't know the private key because there is no strategy better than just guessing and checking random signatures using the public key pk that everyone knows, which takes stupid large amount of time (see 256-bit security below)
   2. the message signed (for instance, a Bitcoin transasction) is indeed the message used to generate the digital signature. None can copy one of your signature to forge it on another message (or Bitcoin transaction). The digital signature is only valid for that specific message. The digital signature on a Bitcoin transaction is a proof that the owner of the bitcoin on the transaction has seen the transaction and approved it
