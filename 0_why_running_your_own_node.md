@@ -5,35 +5,28 @@
 1. [ ] [Basic command line skills](#basic-command-line-skills)
 1. [x] [Resources](#resources)
 
-If you are interested in crypto-currencies, I suggest you invest time to understand Bitcoin first, because Bitcoin is the original crypto-currency protocol. 
+If you are interested in crypto-currencies, I suggest you invest time in understanding Bitcoin first, because Bitcoin is the original crypto-currency protocol and many other crypto-currencies re-use the same concepts. Having said that, once you understand the characterestics of Bitcoin and the trade-offs made by other crypto-currencies, there will be a high chance that you will decide to stick with Bitcoin
 
 ### Cryptography 101
 
-- Everyone generates what's called a public key (pk) / private (or secret) key sk
-- The secret key is something you should keep to yourself
-- A digital signature changes for different messages and is commonly 256-bit long
-- A small change in the message completely changes the signature
-- Producing a signature involves a function that depends both on the message and on your private key. The private key ensures that only you can produce the signature, and the fact that it depends on the message means that no one can just copy one of your signature to forge it on another message
-Signature = Sign(message, sk)
-A function to verify that signature is valid: Verify(message, signature, pk) returns true or false, indicating this was a signature created by the private key associated with the public key you use for the verification
-It is completely infeasible to find a valid signature if you don't know the private key
-so that Verify(message, 256-bit signature, pk) = True
-There is no strategy better than just guessing and checking random signatures using the public key pk that everyone knows
-There are 2^256 possible signatures. 2^256 is a stupidly large number
-How secure is 256 bit security? [OTHER VIDEO]
+#### Public key cryptography
+- Unlike symmetric cryptography that only uses private or secret keys, public key cryptography relies on public keys (pk) and private/secret key (sk)
+- The secret key is a number generated randomly, that you should keep to yourself. The public key is calculated based on the secret key
 
-
-- Digital signatures: proof that the owner of the bitcoin on the transaction has seen the transaction and approved of it
-- It should be infeasible for anyone else to forge her signature
-- Any digital data can be read and copied, so how do you prevent forgeries?
-
-When you verify a signature against a given message and public key is valid, you can feel extemely confident that the only way someone could have produced it is if they knew the private key associated with the public key
+#### Digital signatures
+- A handwritten signature only depends on the signing party. A digital signature depends on both the signing party (or rathe, a private key owned by the signing party) and the message itself being signed: `Signature = Sign(message, sk)` A small change in the message completely changes the digital signature, commonly a 256-bit number
+- When you verify a signature against a given message and public key is valid using `Verify(message, signature, pk) = True or False`, you can feel extemely confident that:
+  1. the only way someone could have produced it is if they knew the private key associated with the public key. The private key ensures that only the signer can produce the signature. It is infeasible, in practical terms, to find a valid signature if you don't know the private key because there is no strategy better than just guessing and checking random signatures using the public key pk that everyone knows, which takes stupid large amount of time (see 256-bit security below)
+  2. the message signed (for instance, a Bitcoin transasction) is indeed the message used to generate the digital signature. None can copy one of your signature to forge it on another message (or Bitcoin transaction). The digital signature is only valid for that specific message. The digital signature on a Bitcoin transaction is a proof that the owner of the bitcoin on the transaction has seen the transaction and approved it
 
 #### Cryptographic Hash functions
-- A Hash function takes any kind of message or file, and outputs a string of bits with a fixed length called hash or digest. The digest is meant to look random but it is not random; it always gives the same output for a given input. If you slightly change the input (editing on character or one pixel), the resulting digest changes completely
-- Cryptograhpic hash functions are hash functions for which the resulting digest is entirely unpredictable: it is infeasibable to compute in the reverse direction. There is no better method than to guess and check
-- No one has ever found a way to reverse engineer the desired input by looking into the details of how the function works. There is no rigorous proof that it is hard to compute in the reverse direction and yet a huge amount of modern security depends on cryptographic hash functions (e.g., secure connections to online bank account)
+- A Hash function takes any kind of message or file, and outputs a string of bits with a fixed length, called hash or digest. The digest is meant to look random but it is not random; it always gives the same output for a given input. If you slightly change the input (editing on character or one pixel), the resulting digest changes completely
+- Cryptograhpic hash functions are hash functions for which the resulting digest is entirely unpredictable: it is infeasibable to compute in the reverse direction. There is no better method than to guess and check. No one has ever found a way to reverse engineer the desired input by looking into the details of how the function works. There is no rigorous proof that it is hard to compute in the reverse direction and yet a huge amount of modern security depends on cryptographic hash functions (e.g., secure connections to online bank account)
 - SHA256 is a cryptographic hash functions that return 256-bit digests
+
+#### 256-bit security
+How secure is 256 bit security? [OTHER VIDEO]
+There are 2^256 possible signatures. 2^256 is a stupidly large number
 
 
 ### What is Bitcoin
@@ -61,6 +54,8 @@ The ledger (a history of transactions) is the Currency.
 
 A centralized ledger is more efficient to run that a decentralized ledger (i.e., replicated on a large number of places) but this requires trusting a central location: who hosts the ledger? who controls the rules of adding new lines? To remove that bit of trust, we'll have everyone keep their own copy of the ledger.
 When you want to make a transaction, you broadcast that into the Bitcoin network for Bitcoin nodes to hear and record on their own private ledgers (miners)
+
+- Any digital data can be read and copied, so how do you prevent forgeries?
 
 How can you get everyone to agree on what the right ledger is? How can you be sure that everyone else received and believes that same transaction?
 How can you be sure that everyone else is recording the same transactions and in the same order?
