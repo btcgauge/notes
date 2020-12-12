@@ -1,4 +1,4 @@
-### Topics
+## Topics
 1. [ ] [Cryptography 101](#cryptography-101)
 1. [ ] [What is Bitcoin](#what-is-bitcoin)
 1. [ ] [Why do you need to run your own node](#why-do-you-need-to-run-your-own-node)
@@ -7,7 +7,7 @@
 
 If you are interested in crypto-currencies, I suggest you invest time in understanding Bitcoin first, because Bitcoin is the original crypto-currency protocol and many other crypto-currencies re-use the same concepts. Having said that, once you understand the characterestics of Bitcoin and the trade-offs made by other crypto-currencies, there is a high chance that you will decide to stick with Bitcoin
 
-### Cryptography 101
+## Cryptography 101
 
 #### Public key cryptography
 - Unlike symmetric cryptography that only uses private/secret keys, public key cryptography relies on public keys (pk) and private/secret key (sk)
@@ -41,7 +41,7 @@ Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
   - Let's assume each Earth-like planets has the same population (there are about 8 Bn people on Earth) and each inhabitants has 4M ASICS running at all time. That would be (2 Bn) x (4 Bn) x (4 Bn) H/s computer power on each planet. If this computing power in the whole universe was generating hashes since the Big Bang, there would still have a 1 in 4Bn chance of finding the correct guess
 
 
-### What is Bitcoin
+## What is Bitcoin
 - The Bitcoin protocol is an alternative to the banking system to make payment transactions and store value
 - A clever system of decentralized trusteless verification based on cryptography:
   - Cryptographic hash functions
