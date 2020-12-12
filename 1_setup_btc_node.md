@@ -51,13 +51,6 @@ Quotes:
 1. To check if tor is running (active), run: `$ service tor status`. After tor is installed, tor will be ON by default after each login
 1. Check the default tor configuration file: `$ sudo vim /usr/share/tor/tor-service-defaults-torrc`
 
-`sh $ sudo vim /usr/share/tor/tor-service-defaults-torrc`
-
-```sh $ sudo vim /usr/share/tor/tor-service-defaults-torrc```
-
-```sh
-$ sudo vim /usr/share/tor/tor-service-defaults-torrc```
-
 ```sh
 $ sudo vim /usr/share/tor/tor-service-defaults-torrc
 ```
