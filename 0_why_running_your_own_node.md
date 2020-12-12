@@ -25,13 +25,18 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 - SHA256 is a cryptographic hash functions that return 256-bit digests
 
 #### How secure is 256-bit security?
-- Bitcoin signatures and SHA256 hash function digests are 256-bit long. If you want to find a message's SHA256 digest or message's 256-bit signature, there is no better method than guess and check random values. This would require, on average, 2^255 guesses.
-- Average number of guesses made to guess a number between 1 and n, assuming n is chosen uniformly at random (that is with probability 1/n) = Sum(a=1 to n)(1/n x a) = 1/n x Sum(a=1 to n)(a) = (1/n)(n)(n+1)/2 = (n+1)/2
-- Sum(1 to 100) = (100+1) + (99+2) + ... + (51+50) = (n+1)(n/2)
-- Number of atom in the visible universe ~ 10^80 ~ 2^266
-- 2^256 = (2^32)^8 = (4 Bn)^8 ~ 10^77
-- 2^256 = (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
-  - A really good Graphics Processing Unit (GPU) on a computer can run a cryptographic hash function and generate a little less than 1 Bn hashes per second. The first 4 Bn can represent the number of hashes per second per computer (H/s)
+- Bitcoin security relies on digital signatures and SHA256 hash function digests are 256-bit long. As mentioned earlier, there is no better method than guess and check random values. `This would require, on average, 2^255 guesses` because (2^256 + 1) / 2 = 2^255, and the average number of tries to guess a number between 1 and n, assuming that the number we guess is chosen uniformly at random (that is witha probability 1/n) is:
+```
+                 __ n                                                  
+                \     x                                                
+                /__ 1        1      __ n       1     n(n + 1)     n + 1
+Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
+                   n         n     /__ 1       n         2          2  
+```
+- A really good Graphics Processing Unit (GPU) can generate a little less than 1 Bn (10^9) hashes per second (H/s). But Bitcoin miners use Application Specific Integrated Circuits (ASICs). They are pieces of hardware that are specifically designed for running a large number of SHA-256 hashes in parallel and nothing else. The efficiency gain is 1000-fold compared to a GPU. A Bitcoin ASICs can generate about 1Tn (10^12) hashes per second (T/s).
+- As points of comparison:
+  - The estimated number of atoms in the visible universe ~ 10^80 ~ 2^266
+  - 2^256 = (2^32)^8 = (4 Bn)^8 ~ 10^77 = (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
   - Imagine 4Bn computers (Google is estimated to have about single digit millions of servers -> 4Bn servers ~ 1 kilo Google worth of computing power
   - There are less than 8 Bn people on Earth. Imagine giving a little over half of every individual on Earth their own personal KiloGoogle
   - Imagine 4Bn copies of this Earth (compared to 100 to 400 billion starts in the Milky Way) ~ 1% of every star in the galaxy
@@ -40,13 +45,6 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
   - You would still only have a 1 in 4 Bn chance of finding the correct guess
   - Total Bitcoin mining power ~ 5 Bn Bn H/s (1/3 of our KiloGoogle). Bitcoin miners use Application Specific Integrated Circuits. These are pieces of hardware that are a thousand times better than a GPU (Tn H/s) and are specifically designed for Bitcoin mining, for running a bunch of SHA-256 hashes in parallel and nothing else. There is a lot of efficiency gains to be had when you throw out the need for general computation and design your integrated circuits for one and only one task.
 
-```
-                 __ n                                                  
-                \     x                                                
-                /__ 1        1      __ n       1     n(n + 1)     n + 1
-Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
-                   n         n     /__ 1       n         2          2  
-```
 
 ### What is Bitcoin
 - The Bitcoin protocol is an alternative to the banking system to make payment transactions and store value
