@@ -50,7 +50,15 @@ Quotes:
 1. Install tor: `$ sudo apt-get install tor`
 1. To check if tor is running (active), run: `$ service tor status`. After tor is installed, tor will be ON by default after each login
 1. Check the default tor configuration file: `$ sudo vim /usr/share/tor/tor-service-defaults-torrc`
+`sh $ sudo vim /usr/share/tor/tor-service-defaults-torrc`
+```sh $ sudo vim /usr/share/tor/tor-service-defaults-torrc```
+```sh
+$ sudo vim /usr/share/tor/tor-service-defaults-torrc```
+```sh
+$ sudo vim /usr/share/tor/tor-service-defaults-torrc
 ```
+
+```sh
 DataDirectory /var/lib/tor
 PidFile /run/tor/tor.pid
 RunAsDaemon 1
@@ -74,7 +82,7 @@ ControlPort 9051
 1. Add user to Tor group: `$ sudo adduser USER_NAME debian-tor`
 1. Confirm the creation by running (1) and (3) again
 1. Edit ~/.bitcoin/bitcoin.conf: `$ vim ~/.bitcoin/bitcoin.conf`
-```
+```sh
 # [User access to the blockchain]
 txindex=1
 # [Tor configuration]
@@ -91,7 +99,7 @@ addnode=yu7sezmixhmyljn4.onion
 ```
 10. If file /etc/tor/torrc does not exist, create it: `$ sudo touch /etc/tor/torrc`
 1. Add the following lines to /etc/tor/torrc if not already there: `$ sudo vim /etc/tor/torrc`
-```
+```sh
 ControlPort 9051
 CookieAuthentication 1
 CookieAuthFileGroupReadable 1
