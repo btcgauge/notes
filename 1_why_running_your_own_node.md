@@ -127,13 +127,14 @@ The proof of work is to find a special number so that the hash starts with 60 ze
 Average block time:
 Many newer cryptocurrencies have much shorter block time (LTC: 2.5 min, ETH: 15 seconds, XRP: 3.5 seconds).
 
+
+
 Block rewards
-All the money in Bitcoin ultimately comes from some block rewards. These reward 50 Bitcoins per block.
-
-Block explorer
-https://blockstream.info/
-
+All the money in Bitcoin ultimately comes from some block rewards. In the beginning, these rewards were 50 Bitcoins per block.
+If you use a block explorer (https://blockstream.info) and look at the very first few blocks on the chain, they contain no transactions other than the coinbase, that 50 BTC reward to the miner. Every 210,000 blocks (about every 4 years), that reward gets cut in half. It was 
 22:37
+
+
 
 Bitcoin is not a company. It’s free open source software. 
 Centralization of miners, of developers
