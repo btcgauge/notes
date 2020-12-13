@@ -44,6 +44,7 @@ Average(x)  =  ---------  =  -  *  /__ 1  x  =  -  *  --------  =  -----
 
 ## What is Bitcoin
 
+### Summary
 Bitcoin is an alternative to the banking system to make payments and store value. It consists of:
 - a network protocol (a decentralized peer-to-peer network)
 - a blockchain (a public ledger of transactions)
@@ -51,8 +52,7 @@ Bitcoin is an alternative to the banking system to make payments and store value
 - the Proof-of-Work algorithm (a mechanism for reaching global decentralized trustless consensus on the valid blockchain
 
 
-
-- A clever system of decentralized trusteless verification based on cryptography (cryptographic hash functions and digital signatures)
+Bitcoin is a clever system of decentralized trusteless verification based on cryptography (cryptographic hash functions and digital signatures) with:
 - A public ledger that records payments (e.g., Alice pays Bob 20 sats) that is accessible to everyone (any one can make a payment, i.e., adding a transaction to the ledger)
 - How are we supposed to trust that all these transactions are what the sender meant for
 
@@ -83,30 +83,61 @@ The Bitcoin protocol trusts whichever ledger has the most computational work put
 If you use computational work as a basis for what you trust, you can make it so that fraudulent transactions and conflicting ledgers would require an infeasible amount of computation to bring about (Fraud <=> computationally infeasible)
 
 Proof of Work
-Cryptographic hash functions can prove that a particular list of transactions is associated with a large amount of computational effort. 
+How can cryptographic hash functions prove that a particular list of transactions is associated with a large amount of computational effort. 
+Imagine you have a special number that, when you add it at the end of a list of transactions, and apply SHA256 to the entire thing, the first 30 bits of the output are all zeros. How hard do you think it was to find that number?
+
+For a random message, the probability that the hash happens to start with 30 successive zeros is 1 / 2^30, which is about 1 in a billion. Because SHA256 is a cryptographic hash function, the only only way to find a special number like that is just guessing and checking. Once you know the number, you can quickly verify that this hash really does start with 30 zeros by running SHA256 once. In other words, you can verify that they went through a large amount of work without going through that same effort yourself. This is called a Proof of Work. And importantly, all this work is intrinsincally tied to that list of transactions. If you change one of the transactions, even slightly, it would completely change the hash, so you would have to go through another billion guesses to find a new Proof of Work, a new number that makes it so that the hash of the altered list together with this new number start with 30 zeros.
+
+Everyone is broadcasting transactions and we want a way for everyone to agree on what the correct ledger is.
+The core idea behind the Bitcoin White Paper is to have everyone trust whichever ledger has the most work put into it.
+
+The ledger is organized into blocks, where each block consists of a list of transactions, together with a proof of work, that is a special number so that the SHA256 hash of the whole block with a certain number of zeros (let's say 60 zeros).
+There is a systematic way to choose the number of zeros.
+
+A transaction is only considered valid if it is signed by the sender, a block is considered valid if it has a proof of work.
+To make sure that there is a standard way to order these blocks, the block has to contain the hash of the previous block.
+That way, if you change any block, or try to swap the order of two blocks, it would change the block that comes after it, which changes the next block, and so on. That would require redoing all of the work, finding a new special number for each of these blocks that makes their hashes start with 60 zeros. Because blocks are chained together, instead of calling it a ledger, this is commonly called a blockchain
+
+Anyone can be a block creator. They'll listen for the transactions being broadcast, collect them into some block, and then do a whole bunch of work to find the special number that makes the hash of this start with 60 zeros, and once they find it,  broadcast the block they found. To reward a block creator for all this work, a special transaction (the coinbase) is added at the top of the block for an amount created out of thin air. This is the block reward. It is an exception to the rules about whether or not to accept a transaction. It does not come from anyone, so it does not have to be signed (no sender or signature). It means that the total amount of currency increases with each new block (adds to the total money supply). Creating blocks is often called mining since it requires a lot of work and it introduces new bits of currency into the economy.
+Miners create blocks, broadcast those blocks and getting rewarded with new money for doing so.
+From the miners' perspective, each block is a miniature lottery, where everyone is guessing numbers as fast as they can until one lucky miner find a special number that makes the hash of the block start with many zeros, and get the reward.
+
+For everyone else who wants to use the system to make payments, you listen for new blocks being broadcasted by miners, updating your own personal copy of the blockchain
+
+If you hear of two distinct blockchains with conflicting transaction histories, you defer to the longer one, which is the one with the most work put into it. If there is a tie, wait until you hear of an additional block that makes one longer. Although there is no cental authority, and everyone is maintaining their own copy of the blockchain, if everyone agrees to give preference to whichever blockchain has the most work put into it, there is a way to arrive at decentralized consensus.
+You don't need to trust a central authority because you trust instead computational work.
+
+Is trusting work really enough?
+To see why this makes for a trustworthy system, and to understand at what point you should trust that a payment is legitiimate, it is helpful to walk through exctly what it would take to fool someone in this system. If Alice wants to fool Bob with a fraudulent block, she might try to send him one that includes her paying him, but without broadcasting that block to the rest of the network. This way, everyone else thinks that Alice never paid Bob. To do this, she'd have to a valid proof of work before all other miners, each working on their own block. And that can definitely happen. Maybe Alice just happen to win this miniature lottery before everyone else. But Bob will still be hearing broadcasts made by other miners, so to keep him believing this fraudulent block, Alice would have to do all the work herself to keep adding blocks on this special fork on Bob's blockchain that is different from what he's hearing from the rest of the miners.
+As per the protocol, Bob always trusts the longest chain he knows about. Alice might be able to keep this up for a few blocks if just by chance she happens to find blocks more quickly all of the rest of the miners on the network combined.
+Unless Alice has close to 50% of the computing resources among all of the miners, the probability becomes overwhelming that the blockchain that all the other miners are working on grows faster than the single fraudulent blockchain that Alice is feeding Bob. So in time, Bob will reject what he's hearing from Alice in favor of the longer chain that everyone else is working on.
+That means that you shouldn't necessarily trust a new block that you hear immediately. Instead, you should wait for several new blocks to be added on top of it. If you still have not heard of any longer blockchains, you can trust that this block is part of the same chain everyone else is using. The longest chain is the consensus chain.
+
+The main ideas of Bitcoin are:
+- digital signatures
+- the ledger is the currency
+- decentralize
+- proof of work
+- blockchain
+
+This distributed ledger system based on a proof of work is more or less how the protocol works, and how many other cryptocurrencies work.
+
+The proof of work is to find a special number so that the hash starts with 60 zeros. The actual way the bitcoin protocol works is to periodically change that number of zeros so that it should take on average, 10 minutes, to find a block. As there are more and more miners added to the network, the challenge gets harder and harder in such a way that this miniature lottery has one winner about every 10 minutes.
+
+22:19
 
 
-
-
-======
-
-What is Bitcoin?
 
 Bitcoin is not a company. It’s free open source software. 
-You can buy a fraction of 1 bitcoin.
-
-
 Centralization of miners, of developers
-
 
 Requiring from a third party to do a transaction is intrusive
 
 Initial price discovery
 Seize or inflate the supply
 
-
 Digital form of payment
-Decentralized (censorship resistant), digital scarcity (limited supply)
+Decentralized (permissionless, censorship-resistant), digital scarcity (limited supply)
 Programmable money, transportable over a communication channel
 
 Electronic payment system based on cryptographic proof instead of trust, allowing any two willing parties to transact directly with each other without the need for a trusted third party. 
@@ -125,23 +156,17 @@ Natural user base: fringe of the population, developed countries
 
 Store of value and payment system are two sides of the same coin
 
-
 As a thought experiment, imagine there were a base metal as scarce as gold, not useful for anything but transportable over a communication channel
 
 Stack & hodl
-Run your own node
-Not your keys, not your sats
 
-Full node
 https://bitcoinist.com/6-reasons-run-bitcoin-full-node/
-
 
 Inflation and censorship-resistant value network
 Sound money: scarcity and censorship resistance
 1 BTC = 1BTC
 
-Cannot be controlled by a sIngle party
-
+Cannot be controlled by a single party
 Store and exchange value
 resilient to counterfeiting (double-spends)
 trust-less
@@ -149,42 +174,21 @@ no counter party risk
 global distributed consensus
 
 Trade-offs:
-* electricity-consuming proof-of-work (mining)
-* high-latency transactions (multiple transaction confirmations)
-* limited scalability (monolithic blockchain containing every transaction, ever).
+- electricity-consuming Proof-of-Work (mining)
+- high-latency transactions (multiple transaction confirmations)
+- limited scalability (monolithic blockchain containing every transaction, ever).
 
 the ledger is the currency
-the ledger is not distributed, it is replicated
+the ledger is distributed, it is replicated
 
-Public conversations matter. They shape social norms.
+Security: your ownership is secure
+Privacy: you decide when and with whom you share your identity
+Freedom (as in free speech): censorship resistance
 
-Security
-Privacy
-Freedom (as in free speech)
-
-Build your own ISP (Internet mesh network)
-BlueMat
-Purchase an IP block
-Multi-homed
-
-Router and data
-At least 2 Internet connections
-
-Full-sovereignty project:
-- land, solar panel
-- own ISP
-
-Running your own node:
-Security: fixed supply
-Do not trust verify
-
-Security
-Privacy
-Freedom: censorship resistance
- Reduces the need to trust other people of group of people (governments, organizations)
+It reduces the need to trust other people or group of people (governments to issue currency and manage its supply, banks to secure and settle transactions)
 
 #### Main characterics:
-- scarcity (the 
+- scarcity (the supply is limited and the schedule of issuance of new currency is known in advance
 - censhorship resistance
 - permissionless
 
@@ -195,7 +199,7 @@ Freedom: censorship resistance
 Side chains
 Lightning payments for small payments
 
-Testnet box
+
 
 #### Rebuttal to Common Criticisms: Bitcoin is ...
 Criticism | Rebuttal
@@ -219,6 +223,7 @@ Misnommers | Correct description
 --- | ---
 Wallet | Key chain, as it stores private and public keys (and track amounts associated to them), not credit cards and bills
 Address | Deposit ID, as they identify a certain deposit and they should never be re-used
+Miners | Block creators
 
 #### Past controversies
 Controversy | Background
@@ -249,3 +254,8 @@ Stack sats | You buy or earn amount less than 1 BTC | You can buy or earn sats. 
 - The godfather of all Bitcoin resources: https://bitcoin.page
 - Mastering Bitcoin: https://github.com/bitcoinbook/bitcoinbook
 - Mastering Lightning Network: https://github.com/lnbook/lnbook
+
+### Wish list
+
+- [ ] testnet running on the same box
+- [ ] Rock64 bitcoin node
