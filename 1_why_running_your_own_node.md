@@ -1,7 +1,11 @@
+# What is Bitcoin, why using a hardware wallet and why running a node?
+
+Why would I buy bitcoin?
+
 ## Topics
 1. [ ] [Cryptography 101](#cryptography-101)
-1. [ ] [What is Bitcoin](#what-is-bitcoin)
-1. [ ] [Why do you need to run your own node](#why-do-you-need-to-run-your-own-node)
+1. [ ] [What is Bitcoin and why would I buy it?](#what-is-bitcoin)
+1. [ ] [If I do, why do I need a hardware wallet, and to run your own node](#why-do-you-need-to-run-your-own-node)
 1. [ ] [Basic command line skills](#basic-command-line-skills)
 1. [x] [Resources](#resources)
 
@@ -28,10 +32,10 @@ If you are interested in crypto-currencies, I suggest you invest time in underst
 - Bitcoin security relies on digital signatures and SHA256 hash function digests are 256-bit long. As mentioned earlier, there is no better method than guess and check random values. `This would require, on average, 2^255 ~ 10^77 guesses` because (2^256 + 1) / 2 = 2^255, and the average number of tries to guess a number between 1 and n, assuming that the number we guess is chosen uniformly at random (that is witha probability 1/n) is:
 ```
                  __ n                                                  
-                \     x                                                
-                /__ 1        1      __ n       1     n(n + 1)     n + 1
-Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
-                   n         n     /__ 1       n         2          2  
+                \     x             __ n                                
+                /__ 1        1     \            1     n(n + 1)     n + 1 
+Average(x)  =  ---------  =  -  *  /__ 1  x  =  -  *  --------  =  -----
+                   n         n                  n         2          2  
 ```
 - 2^255 = 2^31 * (2^32)^7 = (2 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn) x (4 Bn)
 - This is to be compared with the estimated number of atoms in the visible universe ~ 10^80 ~ 2^266
@@ -40,15 +44,12 @@ Average(x)  =  ---------  =  -  *  \     x  =  -  *  --------  =  -----
   - A really good Graphics Processing Unit (GPU) can generate a little less than 1 Bn (10^9) hashes per second (H/s). But Bitcoin miners use Application Specific Integrated Circuits (ASICs). They are pieces of hardware that are specifically designed for running a large number of SHA-256 hashes in parallel and nothing else. The efficiency gain is 1000-fold compared to a GPU. A Bitcoin ASICs can generate about 1Tn (10^12) hashes per second (T/s).
   - Let's assume each Earth-like planets has the same population (there are about 8 Bn people on Earth) and each inhabitants has 4M ASICS running at all time. That would be (2 Bn) x (4 Bn) x (4 Bn) H/s computer power on each planet. If this computing power in the whole universe was generating hashes since the Big Bang, there would still have a 1 in 4Bn chance of finding the correct guess
 
-
 ## What is Bitcoin
-- The Bitcoin protocol is an alternative to the banking system to make payment transactions and store value
-- A clever system of decentralized trusteless verification based on cryptography:
-  - Cryptographic hash functions
-  - Digital signatures
+
+- The Bitcoin protocol is an alternative to the banking system to make payments/transactions and store value
+- A clever system of decentralized trusteless verification based on cryptography (cryptographic hash functions and digital signatures)
 - A public ledger that records payments (e.g., Alice pays Bob 20 sats) that is accessible to everyone (any one can make a payment, i.e., adding a transaction to the ledger)
 - How are we supposed to trust that all these transactions are what the sender meant for
-
 
 1. Only signed transactions are valid
   -  When you sign a transaction, the message has to include some unique id associated with that transaction so that transaction cannot send to the ledger several times
@@ -81,13 +82,14 @@ Cryptographic hash functions can prove that a particular list of transactions is
 
 
 
+
 ======
 
 What is Bitcoin?
 
 Bitcoin is not a company. It’s free open source software. 
 You can buy a fraction of 1 bitcoin.
-Why would I buy bitcoin?
+
 
 Centralization of miners, of developers
 
