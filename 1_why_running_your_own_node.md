@@ -1,6 +1,4 @@
-# What is Bitcoin, why using a hardware wallet and why running a node?
-
-Why would I buy bitcoin?
+# What is Bitcoin, why would I buy it and best practices
 
 ## Topics
 1. [ ] [Cryptography 101](#cryptography-101)
@@ -46,7 +44,14 @@ Average(x)  =  ---------  =  -  *  /__ 1  x  =  -  *  --------  =  -----
 
 ## What is Bitcoin
 
-- The Bitcoin protocol is an alternative to the banking system to make payments/transactions and store value
+Bitcoin is an alternative to the banking system to make payments and store value. It consists of:
+- a network protocol (a decentralized peer-to-peer network)
+- a blockchain (a public ledger of transactions)
+- a consensus rules (a set of rules for independently validating transactions and issuing currency)
+- the Proof-of-Work algorithm (a mechanism for reaching global decentralized trustless consensus on the valid blockchain
+
+
+
 - A clever system of decentralized trusteless verification based on cryptography (cryptographic hash functions and digital signatures)
 - A public ledger that records payments (e.g., Alice pays Bob 20 sats) that is accessible to everyone (any one can make a payment, i.e., adding a transaction to the ledger)
 - How are we supposed to trust that all these transactions are what the sender meant for
