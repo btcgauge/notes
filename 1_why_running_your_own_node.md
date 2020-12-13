@@ -124,9 +124,16 @@ This distributed ledger system based on a proof of work is more or less how the 
 
 The proof of work is to find a special number so that the hash starts with 60 zeros. The actual way the bitcoin protocol works is to periodically change that number of zeros so that it should take on average, 10 minutes, to find a block. As there are more and more miners added to the network, the challenge gets harder and harder in such a way that this miniature lottery has one winner about every 10 minutes.
 
-22:19
+Average block time:
+Many newer cryptocurrencies have much shorter block time (LTC: 2.5 min, ETH: 15 seconds, XRP: 3.5 seconds).
 
+Block rewards
+All the money in Bitcoin ultimately comes from some block rewards. These reward 50 Bitcoins per block.
 
+Block explorer
+https://blockstream.info/
+
+22:37
 
 Bitcoin is not a company. It’s free open source software. 
 Centralization of miners, of developers
