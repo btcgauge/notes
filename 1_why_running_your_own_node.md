@@ -133,7 +133,23 @@ Block rewards
 All the money in Bitcoin ultimately comes from some block rewards. In the beginning, these rewards were 50 Bitcoins per block.
 If you use a block explorer (https://blockstream.info) and look at the very first few blocks on the chain, they contain no transactions other than the coinbase, that 50 BTC reward to the miner. Every 210,000 blocks (about every 4 years), that reward gets cut in half. It was 
 22:37
+In 2021, the reward is 6.25 BTC per block, and because this reward decreases geometrically over time, there will never be more than 21 M BTC in existence.
 
+Fees
+In addition to the block rewards, miners also earn transaction fees. This incentivizes miners to include the transaction that you broadcast into the next block. Each block is limited to about 2,400 transactions, which some argue is unnecessarily restrictive (small vs big blocks). For comparison, Visa processes on average about 1,700 transactions per seconds and is capable of handling more than 24,000 transactions per second (Lightning Network). This comparatively slow processing on bitcoin makes for higher transaction fees since that determines which transactions choose to include in a new block.
+
+Topics to cover:
+- Merkle trees
+- Alternatives to Proof of Work
+- Scripting
+
+White paper: https://bitcoin.org/bitcoin.pdf
+
+https://michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/
+https://www.youtube.com/watch?v=Lx9zgZCMqXE
+
+!!!!
+https://www.youtube.com/watch?v=_160oMzblY8
 
 
 Bitcoin is not a company. It’s free open source software. 
