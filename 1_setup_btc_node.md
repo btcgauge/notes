@@ -43,6 +43,12 @@ Quotes:
 - regardless of whether the server is a real or a virtual machine, you need to forward the appropriate port(s) across your LAN router, i.e., translate from the public IP you obtained from https://ifconfig.me to the server's private IP. You will need to refer to your router's documentation to see how to do that for your specific 
 
 
+Increase virtual disk to full size
+- https://manjaro.site/how-to-extend-lvm-disk-on-ubuntu-20-04/
+- `$ sudo lvm lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv`
+- `$ sudo resize2fs -p /dev/mapper/ubuntu--vg-ubuntu--lv`
+- `$ sudo df -h`
+
 ### Run Bitcoin on Tor
 
 > In order to defend against traffic analysis and network surveillance, hide your IP address and route all of your Bitcoin traffic through the Tor network. Once done, you'll only see the peers' onion instead of IP addresses
