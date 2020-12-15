@@ -110,7 +110,7 @@ CookieAuthFileGroupReadable 1
 1. Find out own onion address: `$ grep "tor: Got service ID" ~/.bitcoin/debug.log`, e.g., a7zzgota55omnenz.onion:8333
 1. Get network info: `$ watch bitcoin-cli getnetworkinfo`
 1. ```$firefox bitnodes.io``` and copy and paste your onion address (unreachable until the initial block load is complete?)
-1. Get list of peer nodes: `$ watch `bitcoin-cli getpeerinfo | grep onion'`
+1. Get list of peer nodes: `$ watch 'bitcoin-cli getpeerinfo | grep onion'`
 1. Check progress of the Initial Block Download: `$ watch -n1 'bitcoin-cli getblockchaininfo | grep verificationprogress'`
 1. `$ watch bitcoin-cli getnetworkinfo`
 
