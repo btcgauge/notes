@@ -24,17 +24,15 @@ Quotes:
 - VirtualBox
   - > Create: Type \ Version: Linux Ubuntu (64-bit), RAM = 4GB > Create
   - Choose disk size > Create
-  - > Settings
-    - > System > Processor: 2 CPU
-    - > Storage > ID controller > select .ISO
-    - > Network > Attached to: Bridge Adapter, Advanced > Promisciuous: allow all > OK
+  - Settings: System > Processor: 2 CPU, Storage > ID controller > select .ISO file
+  - Settings: Network > Attached to: Bridge Adapter, Advanced > Promisciuous: allow all > OK
   - Start
   - Install Open SSH server (do not select identity)
   - access from external IP address + SSL certificate
-  - How to access Ubuntu server running in VirtualBox from outside - Networking adapters:
-    - NAT (Network Address Translation): the guest's network adapter's IP is in a virtual subnet which includes the guest and the host VirtualBox application which acts as a gateway. The guest can access the Internet but the guest cannot be accessed from anywhere. Use: browse the Web, download files and view e-mails inside the guest
-    - Bridged networking: VirtualBox connects to one of your installed network cards and exchange network packets directly, circumventing your host operating system's network stack. Use: network simulations and running servers in a guest
-    - Host-only networking: network containing the host and a set of virtual machines, without the need for the host's physical network interface
+- How to access Ubuntu server running in VirtualBox from outside - Networking adapters:
+  - NAT (Network Address Translation): the guest's network adapter's IP is in a virtual subnet which includes the guest and the host VirtualBox application which acts as a gateway. The guest can access the Internet but the guest cannot be accessed from anywhere. Use: browse the Web, download files and view e-mails inside the guest
+  - Bridged networking: VirtualBox connects to one of your installed network cards and exchange network packets directly, circumventing your host operating system's network stack. Use: network simulations and running servers in a guest
+  - Host-only networking: network containing the host and a set of virtual machines, without the need for the host's physical network interface
   - If you need to access your guest from outside, you need to configure bridged networking, which will give your guest its own IP in your local network. The configuration is done in VirtualBox settings, not in the guest OS. To be able to access the server from outside your LAN (e.g., your mobile), after configuring the networking you additionally will need to set up port forwarding on your DSL modem: VirtualBox > Settings > Network > Attached to: Bridged network, and select desired host interface from the list at the bottom of the page, which contains the physical network interfaces of your systems (en1: AirPort for the Mac wireless interface or en0: Ethernet for the network cable interface)
   
 ### Access Ubuntu server running in VirtualBox from an outside network
