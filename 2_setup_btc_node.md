@@ -11,16 +11,11 @@ Todo:
 - [ ] not done yet
 - [x] already done
 
-Quotes:
-> We're living the future so
-> the present is our past.
 
-### Learn how to use a computer the hard way
-- https://missing.csail.mit.edu
 
 ### How to install Ubuntu Server on VirtualBox and access it with SSH
-- download Ubuntu Server LTS (20.04+)
-- download VirtualBox
+- download Ubuntu Server LTS (20.04+) - ubuntu-20.04.1-live-server-amd64.iso (973.2 MB)
+- download VirtualBox - VirtualBox-6.1.16-140961-OSX.dmg (134.6 MB)
 - VirtualBox
   - > Create: Type \ Version: Linux Ubuntu (64-bit), RAM = 4GB > Create
   - Choose disk size > Create
