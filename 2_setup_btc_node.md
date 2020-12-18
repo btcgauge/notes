@@ -11,7 +11,8 @@ Todo:
 - [ ] not done yet
 - [x] already done
 
-
+### Resources
+- Coinkite: https://www.youtube.com/channel/UCqMPBcyg_wemgvC1jDI3EIw/videos
 
 ### How to install Ubuntu Server on VirtualBox and access it with SSH
 - download Ubuntu Server LTS (20.04+) - ubuntu-20.04.1-live-server-amd64.iso (973.2 MB)
