@@ -23,5 +23,24 @@
   - [ ] https://suredbits.com/category/discreet-log-contracts/
   - [ ] [DLC specifications](https://suredbits.com/category/discreet-log-contracts)
   
- ### Bitcoin-based projects
+ ### Bitcoin-related projects
+ - Bitcoin Optech: https://bitcoinops.org/
+ - Bisq: https://bisq.network/
+ - Block explorer: https://blockstream.info/
  - DIY hardware wallet: https://github.com/cryptoadvance/specter-diy
+ - C cryptographic library: https://github.com/ElementsProject/secp256k1-zkp/blob/secp256k1-zkp/README.md
+ - Taproot activation: https://taprootactivation.com/
+ - https://en.bitcoin.it/wiki/Promotional_graphics
+ - https://github.com/cryptoadvance/specter-desktop
+ - https://github.com/esotericnonsense/bitcoind-ncurses2
+ - https://github.com/petertodd/python-bitcoinlib
+  
+ ### Bitcoin security guides
+ - https://bitcoinsecurity.guide/
+ - https://btcguide.github.io/
+ 
+ ### Self-sovereignty
+ - Coinbase supports withdrawing from bech32 - bc1 addresses
+ 
+ 
+ 
