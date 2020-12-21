@@ -273,6 +273,7 @@ Stack sats | You buy or earn amount less than 1 BTC | You can buy or earn sats. 
 - The godfather of all Bitcoin resources: https://bitcoin.page
 - Mastering Bitcoin: https://github.com/bitcoinbook/bitcoinbook
 - Mastering Lightning Network: https://github.com/lnbook/lnbook
+- Block explorer: https://mempool.space/
 
 ### Wish list
 
