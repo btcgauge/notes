@@ -108,6 +108,9 @@ CookieAuthFileGroupReadable 1
 1. Get list of peer nodes: `$ watch 'bitcoin-cli getpeerinfo | grep onion'`
 1. Check progress of the Initial Block Download: `$ watch -n1 'bitcoin-cli getblockchaininfo | grep verificationprogress'`
 1. `$ watch bitcoin-cli getnetworkinfo`
+1. Confirm the the Initial Block Download (IBD) is complete: `bitcoin-cli getblockchaininfo | grep initialblockdownload`. It is set to `false` when the IBD is complete
+1. Find your onion address: `bitcoin-cli getnetworkinfo | grep onion`
+1. Check that your node is reachable at: https://bitnodes.io/
 
 ### Bisq
 - the P2P exchange network (peer-to-peer and anonymously)
