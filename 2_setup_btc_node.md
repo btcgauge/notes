@@ -19,7 +19,7 @@ Todo:
 - download Ubuntu Server LTS (20.04+) - ubuntu-20.04.1-live-server-amd64.iso (973.2 MB)
 - download VirtualBox - VirtualBox-6.1.16-140961-OSX.dmg (134.6 MB)
 - VirtualBox
-  - > Create: Type \ Version: Linux Ubuntu (64-bit), RAM = 4GB > Create
+  - Create: Type \ Version: Linux Ubuntu (64-bit), RAM = 4GB > Create
   - Choose disk size > Create
   - Settings: System > Processor: 2 CPU, Storage > ID controller > select .ISO file
   - Settings: Network > Attached to: Bridge Adapter, Advanced > Promisciuous: allow all > OK
@@ -31,12 +31,14 @@ Todo:
   - Bridged networking: VirtualBox connects to one of your installed network cards and exchange network packets directly, circumventing your host operating system's network stack. Use: network simulations and running servers in a guest
   - Host-only networking: network containing the host and a set of virtual machines, without the need for the host's physical network interface
   - If you need to access your guest from outside, you need to configure bridged networking, which will give your guest its own IP in your local network. The configuration is done in VirtualBox settings, not in the guest OS. To be able to access the server from outside your LAN (e.g., your mobile), after configuring the networking you additionally will need to set up port forwarding on your DSL modem: VirtualBox > Settings > Network > Attached to: Bridged network, and select desired host interface from the list at the bottom of the page, which contains the physical network interfaces of your systems (en1: AirPort for the Mac wireless interface or en0: Ethernet for the network cable interface)
+  - Netgear router: http://192.168.1.1
+  - `ip address | grep inet`
+  - https://www.tecmint.com/set-add-static-ip-address-in-linux/
   
 ### Access Ubuntu server running in VirtualBox from an outside network
 - set it with Bridget network adapter so it has its own IP and you can address your Ubuntu server from inside your own network
 - $ curl ifconfig.me returns the outside IP
 - regardless of whether the server is a real or a virtual machine, you need to forward the appropriate port(s) across your LAN router, i.e., translate from the public IP you obtained from https://ifconfig.me to the server's private IP. You will need to refer to your router's documentation to see how to do that for your specific 
-
 
 Increase virtual disk to full size
 - https://manjaro.site/how-to-extend-lvm-disk-on-ubuntu-20-04/
