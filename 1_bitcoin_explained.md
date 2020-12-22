@@ -280,9 +280,11 @@ Stack sats | You buy or earn amount less than 1 BTC | You can buy or earn sats. 
 - Bitcoin network protocol: https://jeiwan.net/posts/programming-bitcoin-network-4
 - BTC stats: https://btc.com
 - Schnoor signatures BIP review: https://www.youtube.com/watch?v=rVsNFMzQUck
-- 
+
+### Security
+- https://btcguide.github.io
+
 
 ### Wish list
-
 - [ ] testnet running on the same box
 - [ ] Rock64 bitcoin node
