@@ -275,6 +275,7 @@ Stack sats | You buy or earn amount less than 1 BTC | You can buy or earn sats. 
 - Mastering Lightning Network: https://github.com/lnbook/lnbook
 - Block explorer: https://mempool.space/
 - BTC Sessions: https://www.youtube.com/c/BTCSessions/videos
+- Coinkite / KeepItSimpleBitcoin.com videos: https://www.youtube.com/channel/UCqMPBcyg_wemgvC1jDI3EIw/videos
 
 ### Wish list
 
