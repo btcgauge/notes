@@ -42,5 +42,20 @@
  ### Self-sovereignty
  - Coinbase supports withdrawing from bech32 - bc1 addresses
  
+ ### Taproot
+ - Taproot activation: https://taprootactivation.com
+ - Tapscript: https://bitcoinops.org/en/topics/tapscript/
  
+ ### Multi-signatures
+ - Multi-signatures: n of n
+ - Threshold signatures: k of n (k <n)
+ - MuSig2: https://medium.com/blockstream/musig2-simple-two-round-schnorr-multisignatures-bf9582e99295
+ 
+ ### Coinjoin markets
+ - https://github.com/JoinMarket-Org
+ - https://www.keepitsimplebitcoin.com/joinmarket
+ - https://www.youtube.com/watch?v=9COdlsh4inY&list=PLZKkuPrgFw0bnVJDyzMGHDJ965mlw5Qxg&index=7
+ 
+ ### Miniscript
+ - https://github.com/sipa/miniscript
  
