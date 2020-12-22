@@ -276,6 +276,11 @@ Stack sats | You buy or earn amount less than 1 BTC | You can buy or earn sats. 
 - Block explorer: https://mempool.space/
 - BTC Sessions: https://www.youtube.com/c/BTCSessions/videos
 - Coinkite / KeepItSimpleBitcoin.com videos: https://www.youtube.com/channel/UCqMPBcyg_wemgvC1jDI3EIw/videos
+- Clark Moody Bitcoin: https://bitcoin.clarkmoody.com/tickers
+- Bitcoin network protocol: https://jeiwan.net/posts/programming-bitcoin-network-4
+- BTC stats: https://btc.com
+- Schnoor signatures BIP review: https://www.youtube.com/watch?v=rVsNFMzQUck
+- 
 
 ### Wish list
 
