@@ -137,14 +137,18 @@ Fees
 In addition to the block rewards, miners also earn transaction fees. This incentivizes miners to include the transaction that you broadcast into the next block. Each block is limited to about 2,400 transactions, which some argue is unnecessarily restrictive (small vs big blocks). For comparison, Visa processes on average about 1,700 transactions per seconds and is capable of handling more than 24,000 transactions per second (Lightning Network). This comparatively slow processing on bitcoin makes for higher transaction fees since that determines which transactions choose to include in a new block.
 
 Topics to cover:
-- Merkle trees
+- Merkle trees: https://bitcointechtalk.com/what-is-a-bitcoin-merklized-abstract-syntax-tree-mast-33fdf2da5e2f
 - Alternatives to Proof of Work
 - Scripting
 
-White paper: https://bitcoin.org/bitcoin.pdf
-Detailed explanation of the bitcoin protocol: https://michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/
-Visual explanation of hashing and Proof of Work: https://www.youtube.com/watch?v=_160oMzblY8
-Bitcoin under the hood: https://www.youtube.com/watch?v=Lx9zgZCMqXE
+- White paper: https://bitcoin.org/bitcoin.pdf
+- Detailed explanation of the bitcoin protocol: https://michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/
+- Visual explanation of hashing and Proof of Work: https://www.youtube.com/watch?v=_160oMzblY8
+- Bitcoin under the hood: https://www.youtube.com/watch?v=Lx9zgZCMqXE
+
+### Transactions
+- https://blog.susanka.eu/types-of-bitcoin-transactions-part-i
+- https://blog.susanka.eu/types-of-bitcoin-transactions-part-ii-segwit
 
 
 Bitcoin is not a company. It’s free open source software. 
