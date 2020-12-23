@@ -13,16 +13,23 @@
   - The Lindy effect is a theory that the future life expectancy of technology or ideas is proportional to their current age.
   - The longer a technology or an idea is around, the higher change it will stay around for longer: its mortality rate decreases with time.
 
+### Bitcoin protocol
+- cryptographic hash functions and digital signatures
+- a decentralized peer-to-peer network with a gossip protocol to disseminate transactions and blocks -> permission-less / censorship-resistant
+- consensus rules for each node to independently validate transactions and blocks, and for block creators (miners) to issue new currency -> distributed
+- a public ledger of transactions stored in crypographically-linked blocks, a blockchain
+- the Proof-of-Work algorithm, a mechanism for reaching global decentralized trust-less consensus on the valid blockchain
+
 ### Economics
 - Causes for inflation: https://www.economicshelp.org/macroeconomics/inflation/causes-inflation/
 - Economics 101: https://jimmysong.medium.com/learning-economics-3fb7f65173b8
 
 ### What is Bitcoin
+- https://en.wikipedia.org/wiki/Money
 - https://medium.com/hackernoon/what-is-bitcoin-part-1-1755b81984e8
 
 ### Bitcoin misc
 - https://jimmysong.medium.com/why-satoshi-probably-didnt-move-some-coins-from-2009-ad967d40582a
-- 
 
 ### BTC Pre-history
 - https://www.activism.net/cypherpunk/manifesto.html
@@ -42,8 +49,6 @@
 ### Contribution to BTC, open source in general
 - https://opensource.guide/how-to-contribute
 - https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8
-
-
 
 ### Others
 - https://jimmysong.medium.com/goals-2020-b5675519fd5f
