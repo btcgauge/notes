@@ -12,3 +12,38 @@
 - Lindsey effect
   - The Lindy effect is a theory that the future life expectancy of technology or ideas is proportional to their current age.
   - The longer a technology or an idea is around, the higher change it will stay around for longer: its mortality rate decreases with time.
+
+### Economics
+- Causes for inflation: https://www.economicshelp.org/macroeconomics/inflation/causes-inflation/
+- Economics 101: https://jimmysong.medium.com/learning-economics-3fb7f65173b8
+
+### What is Bitcoin
+- https://medium.com/hackernoon/what-is-bitcoin-part-1-1755b81984e8
+
+### Bitcoin misc
+- https://jimmysong.medium.com/why-satoshi-probably-didnt-move-some-coins-from-2009-ad967d40582a
+- 
+
+### BTC Pre-history
+- https://www.activism.net/cypherpunk/manifesto.html
+
+### BTC History
+- https://en.wikipedia.org/wiki/History_of_bitcoin
+- https://jimmysong.medium.com/segwit2x-post-mortem-divorce-of-crypto-austrians-and-crypto-keynesians-87960b11ce4c
+- https://www.forbes.com/sites/ktorpey/2017/11/30/2017-was-the-year-when-everyone-finally-learned-bitcoin-isnt-controlled-by-miners/?sh=4b8728384de3
+
+### Technical trainings:
+- https://bitcoinedge.org/tutorial/dpp101-jimmy-song-bitoin-math-ecdsa-transactions?t=1h29m27s
+
+### Security
+- https://blog.lopp.net/modest-privacy-protection-proposal/
+- https://blog.keys.casa/how-to-protect-your-bitcoin-from-5-wrench-attacks/
+
+### Contribution to BTC, open source in general
+- https://opensource.guide/how-to-contribute
+- https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8
+
+
+
+### Others
+- https://jimmysong.medium.com/goals-2020-b5675519fd5f
