@@ -23,6 +23,8 @@
 ### Economics
 - Causes for inflation: https://www.economicshelp.org/macroeconomics/inflation/causes-inflation/
 - Economics 101: https://jimmysong.medium.com/learning-economics-3fb7f65173b8
+- Econonomics 102: https://mises.org/library/1-demand-and-supply-consumer-goods-prices-and-exchange
+- Mises in one lesson: https://mises.org/library/8-mises-one-lesson
 
 ### What is Bitcoin
 - https://en.wikipedia.org/wiki/Money
@@ -49,6 +51,20 @@
 ### Contribution to BTC, open source in general
 - https://opensource.guide/how-to-contribute
 - https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8
+
+### Bitcoin privacy
+- https://news.bitcoin.com/what-grin-and-mimblewimble-mean-for-the-future-of-bitcoin-privacy
+- https://bitcoinmagazine.com/articles/graftroot-how-delegating-signatures-allows-near-infinite-spending-variations
+- https://bitcoinmagazine.com/articles/anatomy-anonymity-how-dandelion-could-make-bitcoin-more-private
+
+### Lightning Network
+- https://blog.lightning.engineering/posts/2018/05/02/lightning-ux.html
+- https://dev.lightning.community/tutorial/04-webapp-integration
+- https://lightning.community/lnd/faucet/2017/01/19/lightning-network-faucet
+
+### BTC Pay Server
+- Definitive guide: https://medium.com/@rickytheghost1981/the-definitive-guide-to-btcpay-server-pt-3-versatility-c33aec10c0bc
+- https://github.com/JeffVandrewJr/btcqbo/blob/master/README.md
 
 ### Others
 - https://jimmysong.medium.com/goals-2020-b5675519fd5f
