@@ -32,6 +32,7 @@
 
 ### Bitcoin misc
 - https://jimmysong.medium.com/why-satoshi-probably-didnt-move-some-coins-from-2009-ad967d40582a
+- BTC supply on exchange wallets: https://www.viewbase.com/coin/bitcoin
 
 ### BTC Pre-history
 - https://www.activism.net/cypherpunk/manifesto.html
