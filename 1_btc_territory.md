@@ -49,6 +49,9 @@
 - https://blog.lopp.net/modest-privacy-protection-proposal/
 - https://blog.keys.casa/how-to-protect-your-bitcoin-from-5-wrench-attacks/
 
+### BTC self-custody
+- https://bitcointencommandments.com/
+
 ### Contribution to BTC, open source in general
 - https://opensource.guide/how-to-contribute
 - https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8
